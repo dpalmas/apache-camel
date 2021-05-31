@@ -13,7 +13,7 @@ public class RotaPedidos {
 		context.addRoutes(new RouteBuilder() {
 			@Override
 			public void configure() throws Exception {
-				from("file:pedidos?delay=5s&noop=true").
+				from("file:pedidos?delay=5&noop=true").
 						split().xpath("/pedido/itens/item").
 						filter().xpath("/item/formato[text()='EBOOK']").
 						marshal().xmljson().

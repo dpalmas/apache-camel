@@ -2,9 +2,19 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="dev_repository" />
+      <option name="name" value="dev_repository" />
+      <option name="url" value="https://arm.seli.gic.ericsson.se/artifactory/proj-ael-dev" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Central Repository" />
       <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="release_repository" />
+      <option name="name" value="release_repository" />
+      <option name="url" value="https://arm.seli.gic.ericsson.se/artifactory/proj-ael-release" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />
@@ -15,6 +25,11 @@
       <option name="id" value="jboss.community" />
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="armseka-proj-cpi" />
+      <option name="name" value="armseka-proj-cpi" />
+      <option name="url" value="https://arm.seli.gic.ericsson.se/artifactory/proj-cpi-dev" />
     </remote-repository>
   </component>
 </project>
