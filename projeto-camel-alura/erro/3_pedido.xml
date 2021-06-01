@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nota="http://financeiro.com.br/nota">
+<soap:Body>
+<nota:nota>
+<nota:data>2013-12-05T18:10:07.963-02:00</nota:data>
+<nota:valor>89.80</nota:valor>
+<nota:itens>
+<nota:item>
+<nota:quantidade>1</nota:quantidade>
+<nota:formato>IMPRESSO</nota:formato>
+<nota:codigo>TDD</nota:codigo>
+</nota:item>
+<nota:item>
+<nota:quantidade>1</nota:quantidade>
+<nota:formato>EBOOK</nota:formato>
+<nota:codigo>ARQ</nota:codigo>
+</nota:item>
+</nota:itens>
+</nota:nota>
+</soap:Body>
+</soap:Envelope>
