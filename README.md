@@ -119,7 +119,7 @@ new RoutesBuilder() {
 
 - [ ] {{id}}
 - [ ] @id
-- [ ] #{id}
+- [ ] #{id}<br>
 :white_check_mark: ${id}
 - [ ] $id
 
@@ -143,6 +143,6 @@ new RoutesBuilder() {
 
 - [ ] O processo de alteração de dados para aplicar uma série de cálculos é marshal. Desfazer essas alterações é chamado de unmarshal.
 
-- :white_check_mark: O processo de transformação de dados em memória em um outro formato é chamado de marshal. O contrário é chamado de unmarshal.
+:white_check_mark: O processo de transformação de dados em memória em um outro formato é chamado de marshal. O contrário é chamado de unmarshal.
 
 - [ ] O processo de otimização de dados de um format
