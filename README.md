@@ -120,8 +120,7 @@ new RoutesBuilder() {
 - [ ] {{id}}
 - [ ] @id
 - [ ] #{id}
-<br>
-:white_check_mark: ${id}
+- [X] ${id}
 - [ ] $id
 
 ### Para saber mais: Estilos de integração
