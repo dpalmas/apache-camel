@@ -9,13 +9,14 @@ import java.io.IOException;
 import java.util.Scanner;
 
 //http://localhost:8080/webservices/ebook/item
-@WebServlet(loadOnStartup = 1, urlPatterns = "/ebook/item")
-public class EbooItemServlet extends HttpServlet {
+@WebServlet (loadOnStartup = 1, urlPatterns = "/ebook/item")
+public class EbooItemServlet extends HttpServlet
+{
     private static final long serialVersionUID = 1L;
 
-
     @Override
-    public void init() throws ServletException {
+    public void init() throws ServletException
+    {
         System.out.println("Subindo servico ebook http://localhost:8080/webservices/ebook/item");
     }
 
@@ -24,11 +25,12 @@ public class EbooItemServlet extends HttpServlet {
       http://localhost:8080/webservices/ebook/item
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
         System.out.print("Ebook (HTTP) recebendo POST " + request.getRequestURI() + " - ");
         Scanner scanner = new Scanner(request.getInputStream());
-        while (scanner.hasNextLine()) {
+        while (scanner.hasNextLine())
+        {
             System.out.println(scanner.nextLine());
         }
         scanner.close();
@@ -39,8 +41,8 @@ public class EbooItemServlet extends HttpServlet {
       http://localhost:8080/webservices/ebook/item
      */
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
+    {
         String pedidoId = req.getParameter("pedidoId");
         String clienteId = req.getParameter("clienteId");
         String ebookId = req.getParameter("ebookId");
