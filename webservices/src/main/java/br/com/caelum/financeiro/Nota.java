@@ -12,50 +12,59 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-@XmlAccessorType(XmlAccessType.FIELD)
-public class Nota {
-
-    @XmlElement(required = true)
+@XmlAccessorType (XmlAccessType.FIELD)
+public class Nota
+{
+    @XmlElement (required = true)
     private Calendar data;
 
-    @XmlElement(required = true)
+    @XmlElement (required = true)
     private BigDecimal valor;
 
-    @XmlElementWrapper(required = true, name = "itens")
-    @XmlElement(required = true, name = "item")
+    @XmlElementWrapper (required = true, name = "itens")
+    @XmlElement (required = true, name = "item")
     private List<Item> itens;
 
-    public Calendar getData() {
+    public Calendar getData()
+    {
         return data;
     }
 
-    public void setData(Calendar data) {
+    public void setData(Calendar data)
+    {
         this.data = data;
     }
 
-    public BigDecimal getValor() {
+    public BigDecimal getValor()
+    {
         return valor;
     }
 
-    public void setValor(BigDecimal valor) {
+    public void setValor(BigDecimal valor)
+    {
         this.valor = valor;
     }
 
-    public List<Item> getItens() {
+    public List<Item> getItens()
+    {
         return itens;
     }
 
-    public void setItens(List<Item> itens) {
+    public void setItens(List<Item> itens)
+    {
         this.itens = itens;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "Nota [data=" + formatData() + ", valor=" + valor + ", itens=" + itens + "]";
     }
 
-    private String formatData() {
-        if (this.data == null) {
+    private String formatData()
+    {
+        if (this.data == null)
+        {
             return "";
         }
         return new SimpleDateFormat("dd/MM/yyyy").format(this.data.getTime());
