@@ -8,23 +8,25 @@ import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.http4.HttpMethods;
 import org.apache.camel.impl.DefaultCamelContext;
 
-public class RotaEnviarPedidos {
+public class RotaEnviarPedidos
+{
+    public static void main(String[] args) throws Exception
+    {
+        CamelContext context = new DefaultCamelContext();
+        context.addComponent("activemq", ActiveMQComponent.activeMQComponent("tcp://localhost:61616/"));
 
-	public static void main(String[] args) throws Exception {
+        context.addRoutes(new RouteBuilder()
+        {
+            @Override
+            public void configure() throws Exception
+            {
+                from("file:pedidos?noop=true")
+                        .to("activemq:queue:pedidos");
+            }
+        });
 
-		CamelContext context = new DefaultCamelContext();
-		context.addComponent("activemq", ActiveMQComponent.activeMQComponent("tcp://localhost:61616/"));
-
-		context.addRoutes(new RouteBuilder() {
-			@Override
-			public void configure() throws Exception {
-				from("file:pedidos?noop=true").
-						to("activemq:queue:pedidos");
-			}
-		});
-
-		context.start();
-		Thread.sleep(20000);
-		context.stop();
-	}
+        context.start();
+        Thread.sleep(20000);
+        context.stop();
+    }
 }
