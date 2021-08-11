@@ -4,42 +4,49 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 
-@XmlAccessorType(XmlAccessType.FIELD)
-public class Item {
-
-    @XmlElement(required = true)
+@XmlAccessorType (XmlAccessType.FIELD)
+public class Item
+{
+    @XmlElement (required = true)
     private int quantidade;
-    @XmlElement(required = true)
+    @XmlElement (required = true)
     private String formato;
-    @XmlElement(required = true)
+    @XmlElement (required = true)
     private String codigo;
 
-    public int getQuantidade() {
+    public int getQuantidade()
+    {
         return quantidade;
     }
 
-    public void setQuantidade(int quantidade) {
+    public void setQuantidade(int quantidade)
+    {
         this.quantidade = quantidade;
     }
 
-    public String getFormato() {
+    public String getFormato()
+    {
         return formato;
     }
 
-    public void setFormato(String formato) {
+    public void setFormato(String formato)
+    {
         this.formato = formato;
     }
 
-    public String getCodigo() {
+    public String getCodigo()
+    {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(String codigo)
+    {
         this.codigo = codigo;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "Item [quantidade=" + quantidade + ", formato=" + formato + ", codigo=" + codigo + "]";
     }
 }
